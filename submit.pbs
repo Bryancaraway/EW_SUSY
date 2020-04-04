@@ -2,5 +2,6 @@
 #PBS -l nodes=1:ppn=1
 
 cd $PBS_O_WORKDIR
+# use rhel7 for you need RHEL7/SL7 like environment 
 singularity exec --bind /cvmfs --bind /cms /cvmfs/singularity.opensciencegrid.org/bbockelm/cms:rhel6 \
     ./worker.sh $exeAna $fileListName $outputFile $datasetAna
